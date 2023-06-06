@@ -1,25 +1,34 @@
-# Sistema de Gerenciamento de Contratos
+# Sistema de Gerenciamento de Pedidos
 
-Este é um projeto Java que implementa um sistema de gerenciamento de contratos de trabalhadores. O sistema permite calcular a renda mensal de um trabalhador com base nos contratos que ele possui.
+Este é um projeto Java que implementa um sistema de gerenciamento de pedidos de clientes. O sistema permite criar pedidos, adicionar itens aos pedidos e calcular o preço total do pedido.
 
 ## Descrição
 
-O projeto consiste em três classes principais:
+O projeto consiste em quatro classes principais:
 
-- Trabalhador: representa um trabalhador e contém informações como nome, nível de trabalho, salário e departamento. Essa classe também possui métodos para adicionar e remover contratos, calcular a renda mensal e exibir informações do trabalhador.
+- `Cliente`: representa um cliente e contém informações como nome, e-mail e data de nascimento. Essa classe também possui um método para exibir as informações do cliente.
 
-- Contrato: representa um contrato de trabalho e contém informações como data, valor por hora e quantidade de horas trabalhadas. Essa classe possui um método para calcular o valor total do contrato.
+- `Pedido`: representa um pedido e contém informações como momento, status e uma lista de itens. Essa classe possui métodos para adicionar e remover itens do pedido, calcular o preço total do pedido e exibir um resumo do pedido.
 
-- Departamento: representa um departamento e contém informações como nome. Essa classe é utilizada para associar um departamento a um trabalhador.
+- `Item`: representa um item do pedido e contém informações como quantidade, preço e o produto associado. Essa classe possui um método para calcular o subtotal do item.
 
-Além disso, o projeto inclui um enum chamado NivelTrabalho, que define os diferentes níveis de trabalho possíveis para um trabalhador (JUNIOR, PLENO, SENIOR).
+- `Produto`: representa um produto e contém informações como nome e preço.
+
+Além disso, o projeto inclui um enum chamado `Status`, que define os diferentes status possíveis para um pedido (`PENDENTE_PAGAMENTO`, `PROCESSANDO`, `ENVIADO`, `ENTREGUE`).
 
 ## Funcionalidades
 
-O sistema de gerenciamento de contratos possui as seguintes funcionalidades:
+O sistema de gerenciamento de pedidos possui as seguintes funcionalidades:
 
-- Adicionar um novo contrato ao trabalhador.
-- Remover um contrato existente do trabalhador.
-- Calcular a renda mensal do trabalhador para um determinado ano e mês.
-- Exibir as informações básicas do trabalhador, como nome e departamento.
+- Registrar os dados do cliente, como nome, e-mail e data de nascimento.
+- Criar um novo pedido informando o status.
+- Adicionar itens ao pedido, fornecendo informações como nome do produto, preço e quantidade.
+- Remover itens do pedido.
+- Calcular o preço total do pedido.
+- Exibir um resumo do pedido, incluindo momento do pedido e status.
+- Exibir os dados do cliente.
+- Exibir os itens do pedido, incluindo nome do produto, preço, quantidade e subtotal.
+
+O sistema utiliza a classe `Scanner` para obter os dados do cliente e dos itens do pedido a partir da entrada do usuário.
+
 
